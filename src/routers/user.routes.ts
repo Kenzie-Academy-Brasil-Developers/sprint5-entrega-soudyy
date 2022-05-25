@@ -11,6 +11,6 @@ import userUpdateController from "../controllers/users/userUpdate.controller";
 routes.post("/users", userCreateController);
 routes.get("/users", userListController);
 routes.get("/users/:id", authUser, userListOneController);
-routes.patch("users/:id", authUser, userUpdateController);
+routes.patch("/users/:id", authUser, userUpdateController);
 routes.delete("/users/:id", authUser, userDeleteController);
 export default routes;

@@ -1,4 +1,3 @@
-import bcrypt from "bcrypt";
 import { userRepository } from "../../repositories";
 
 const userUpdateService = async (
@@ -11,8 +10,8 @@ const userUpdateService = async (
   const update_at = new Date();
 
   const user = await userRepository.update(uuid, {
-    email: email,
     name: name,
+    email: email,
     age: age,
     updated_at: update_at,
   });
